@@ -4,7 +4,7 @@ from prometheus_client.parser import text_string_to_metric_families as pc
 import requests
 
 
-class UptimeKuma:
+class UptimeKumaMonitor:
     """An object containing a dictionary representation of data returned by
     UptimeKuma `/metrics` endpoint
 
@@ -37,10 +37,9 @@ class UptimeKuma:
             for family in pc(str(self.metrics, "UTF-8")):
                 for sample in family.samples:
                     if sample[0].startswith("monitor"): self.data [sample[1]["monitor_name"]][sample[0]] = sample[2]
-
-        except Exception as e:
+        except Exception as error:
             raise UptimeKumaError(
-                f"{e}: Could not fetch Uptime Kuma metrics. Check your url, username and password and try again"
+                f"Could not fetch Uptime Kuma metrics: {error}"
             )
 
 

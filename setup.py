@@ -7,11 +7,11 @@ with open(path.join(this_directory, "README.md"), encoding="utf-8") as f:
 
 
 setuptools.setup(
-    name="uptime_kuma",
-    version="0.0.1",
+    name="uptime_kuma_monitor",
+    version="1.0.0",
     description="Python wrapper around Uptime Kuma /metrics endpoint",
     long_description=long_description,
     long_description_content_type="text/markdown",
     install_requires=["requests", "prometheus-client"],
-    py_modules=["uptime_kuma"],
+    py_modules=["uptime_kuma_monitor"],
 )
