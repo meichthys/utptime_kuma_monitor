@@ -14,4 +14,5 @@ setuptools.setup(
     long_description_content_type="text/markdown",
     install_requires=["requests", "prometheus-client"],
     py_modules=["uptime_kuma_monitor"],
+    url="https://github.com/meichthys/utptime_kuma_monitor",
 )
