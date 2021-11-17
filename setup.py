@@ -10,6 +10,7 @@ setuptools.setup(
     name="uptime_kuma_monitor",
     version="1.0.0",
     description="Python wrapper around Uptime Kuma /metrics endpoint",
+    license="MIT",
     long_description=long_description,
     long_description_content_type="text/markdown",
     install_requires=["requests", "prometheus-client"],
